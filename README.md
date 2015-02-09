@@ -1,5 +1,5 @@
 alljoyn-testing-service
-======================
+=======================
 
 Testing service for messages marshalling and unmarshalling.
 
@@ -36,8 +36,35 @@ Service info
 static const char* testInterface[] = 
 {
 	"org.alljoyn.Bus.TestService",
-	"?Get <sas >v",
-	"?Set <v >v",
+	"?Get <sas >v", // <s: signature, <as: array of variant's signature (optional), >v: returned arguments basing on signature
+	"?Set <v >v", // <v: signature and input arguments, >v: returned arguments
 	NULL
 };
 ```
+* Sample usage for sending a marshalling request (using Set method at index 1):
+```
+var args =
+[
+	"(bynqasiuxtaxa{sv}ns)",
+	false,
+	127,
+	-12345,
+	54321,
+	"String element 0", "String element 1", "String element 2", "String element 3", "String element 4", "",
+	-1234567,
+	1234567,
+	-1234567890,
+	1234567890,
+	[-5555555555, -4444444444, -3333333333, -2222222222, -1111111111, 0, 1111111111, 2222222222, 3333333333, 4444444444, 5555555555],
+	"Element 0: s", "s", "Element 0: s: v => 's'", "Element 1: s", "b", true, "Element 2: s", "i", -10000, "",
+	10000,
+	"String end"
+];
+
+status = AllJoynWinRTComponent.AllJoyn.aj_MarshalArgs(msg, "v", args);
+```
+
+How to build
+------------
+* Windows: Visual Studio 2013
+* Linux/Arduino: https://allseenalliance.org/developers/develop/building/thin-linux

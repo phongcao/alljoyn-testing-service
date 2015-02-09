@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="ajtcl\src\aj_about.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="ajtcl\src\aj_bufio.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="ajtcl\src\aj_bus.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="ajtcl\src\aj_cert.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="ajtcl\src\aj_connect.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="ajtcl\src\aj_crc16.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="ajtcl\src\aj_creds.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="ajtcl\src\aj_crypto.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="ajtcl\crypto\ecc\aj_crypto_ecc.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="ajtcl\crypto\ecc\aj_crypto_sha2.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="ajtcl\src\aj_debug.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="ajtcl\src\aj_disco.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="ajtcl\src\aj_guid.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="ajtcl\src\aj_helper.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="ajtcl\src\aj_init.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="ajtcl\src\aj_introspect.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="ajtcl\src\aj_keyauthentication.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="ajtcl\src\aj_keyexchange.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="ajtcl\src\aj_link_timeout.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="ajtcl\malloc\aj_malloc.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="ajtcl\src\aj_msg.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="ajtcl\src\aj_nvram.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="ajtcl\src\aj_peer.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="ajtcl\src\aj_serial.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="ajtcl\src\aj_serial_rx.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="ajtcl\src\aj_serial_tx.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="ajtcl\src\aj_std.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="ajtcl\crypto\aj_sw_crypto.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="ajtcl\target\win32\aj_target_crypto.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="ajtcl\target\win32\aj_target_nvram.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="ajtcl\target\win32\aj_target_util.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="ajtcl\src\aj_util.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="ajtcl\external\sha2\sha2.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="src\service.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="ajtcl\target\win32\aj_net.c">
+      <Filter>ajtcl</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="ajtcl">
+      <UniqueIdentifier>{727638af-b7bd-4da2-aac9-928828a07e89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc">
+      <UniqueIdentifier>{fb1bd50c-abb2-4e68-833f-b5e56a535769}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{4cf127ea-54ea-4eaf-b7fd-7684d6963c83}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\service.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\defs.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\macros.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="ajtcl\target\win32\aj_target.h">
+      <Filter>ajtcl</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

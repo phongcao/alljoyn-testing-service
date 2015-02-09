@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ajtcl\crypto\aj_sw_crypto.c" />
+    <ClCompile Include="ajtcl\crypto\ecc\aj_crypto_ecc.c" />
+    <ClCompile Include="ajtcl\crypto\ecc\aj_crypto_sha2.c" />
+    <ClCompile Include="ajtcl\external\sha2\sha2.c" />
+    <ClCompile Include="ajtcl\malloc\aj_malloc.c" />
+    <ClCompile Include="ajtcl\src\aj_about.c" />
+    <ClCompile Include="ajtcl\src\aj_bufio.c" />
+    <ClCompile Include="ajtcl\src\aj_bus.c" />
+    <ClCompile Include="ajtcl\src\aj_cert.c" />
+    <ClCompile Include="ajtcl\src\aj_connect.c" />
+    <ClCompile Include="ajtcl\src\aj_crc16.c" />
+    <ClCompile Include="ajtcl\src\aj_creds.c" />
+    <ClCompile Include="ajtcl\src\aj_crypto.c" />
+    <ClCompile Include="ajtcl\src\aj_debug.c" />
+    <ClCompile Include="ajtcl\src\aj_disco.c" />
+    <ClCompile Include="ajtcl\src\aj_guid.c" />
+    <ClCompile Include="ajtcl\src\aj_helper.c" />
+    <ClCompile Include="ajtcl\src\aj_init.c" />
+    <ClCompile Include="ajtcl\src\aj_introspect.c" />
+    <ClCompile Include="ajtcl\src\aj_keyauthentication.c" />
+    <ClCompile Include="ajtcl\src\aj_keyexchange.c" />
+    <ClCompile Include="ajtcl\src\aj_link_timeout.c" />
+    <ClCompile Include="ajtcl\src\aj_msg.c" />
+    <ClCompile Include="ajtcl\src\aj_nvram.c" />
+    <ClCompile Include="ajtcl\src\aj_peer.c" />
+    <ClCompile Include="ajtcl\src\aj_serial.c" />
+    <ClCompile Include="ajtcl\src\aj_serial_rx.c" />
+    <ClCompile Include="ajtcl\src\aj_serial_tx.c" />
+    <ClCompile Include="ajtcl\src\aj_std.c" />
+    <ClCompile Include="ajtcl\src\aj_util.c" />
+    <ClCompile Include="ajtcl\target\win32\aj_net.c" />
+    <ClCompile Include="ajtcl\target\win32\aj_target_crypto.c" />
+    <ClCompile Include="ajtcl\target\win32\aj_target_nvram.c" />
+    <ClCompile Include="ajtcl\target\win32\aj_target_util.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\service.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ajtcl\target\win32\aj_target.h" />
+    <ClInclude Include="src\defs.h" />
+    <ClInclude Include="src\macros.h" />
+    <ClInclude Include="src\service.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0E45B885-323A-4876-8515-FF1C9B029167}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Service</RootNamespace>
+    <ProjectName>Service</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions);AJ_MAIN;AJ_DEBUG_RESTRICT=AJ_DEBUG_ALL</PreprocessorDefinitions>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>ajtcl\inc\;ajtcl\target\win32\;ajtcl\bsp\;ajtcl\external\sha2\;ajtcl\malloc\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>false</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

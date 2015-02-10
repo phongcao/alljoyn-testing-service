@@ -47,16 +47,16 @@ var args =
 [
 	"(bynqasiuxtaxa{sv}ns)",
 	false,
-	127,
+	-127,
 	-12345,
 	54321,
-	"String element 0", "String element 1", "String element 2", "String element 3", "String element 4", "",
+	["String element 0", "String element 1", "String element 2", "String element 3", "String element 4"],
 	-1234567,
 	1234567,
 	-1234567890,
 	1234567890,
 	[-5555555555, -4444444444, -3333333333, -2222222222, -1111111111, 0, 1111111111, 2222222222, 3333333333, 4444444444, 5555555555],
-	"Element 0: s", "s", "Element 0: s: v => 's'", "Element 1: s", "b", true, "Element 2: s", "i", -10000, "",
+	[["Element 0: s", "s", "Element 0: s: v => 's'"], ["Element 1: s", "b", true], ["Element 2: s", "i", -10000], ["Element 3: s", "n", 12345], ["Element 4: s", "t", 54321]],
 	10000,
 	"String end"
 ];

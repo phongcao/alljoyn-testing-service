@@ -208,7 +208,15 @@ static AJ_Status MarshalArgs(AJ_Message* msg, const char** sig, const char*** vL
 					break;
 
 				case 8:
-					u64 = (RND(0, UINT8_MAX)) << 56;
+					if (typeId == 'd')
+					{
+						double d = 0.12345 * RND(0, UINT8_MAX);
+						u64 = *((uint64_t*)&d);
+					}
+					else
+					{
+						u64 = (RND(0, UINT8_MAX)) << 56;
+					}
 					val = &u64;
 					break;
 				}
